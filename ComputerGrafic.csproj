@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddConstantFilter.cs" />
     <Compile Include="BlurFilter.cs" />
     <Compile Include="GaussianFilter.cs" />
     <Compile Include="InvertFilter.cs" />
@@ -59,7 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sharpning.cs" />
     <Compile Include="SobelFilter.cs" />
+    <Compile Include="WBFilter.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

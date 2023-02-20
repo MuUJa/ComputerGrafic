@@ -121,5 +121,23 @@ namespace ComputerGrafic
             MyFilter filter = new SobelFilter(false);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void blackWhiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new WBFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void sharpeningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Sharpning(1);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void addConstantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new AddConstantFilter(-20);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

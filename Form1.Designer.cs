@@ -34,16 +34,19 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.invertColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gaussianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.blackWhiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharpeningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addConstantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +81,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -94,10 +97,19 @@
             // localToolStripMenuItem
             // 
             this.localToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.invertColorToolStripMenuItem});
+            this.invertColorToolStripMenuItem,
+            this.blackWhiteToolStripMenuItem,
+            this.addConstantToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
             this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.localToolStripMenuItem.Text = "Local";
+            // 
+            // invertColorToolStripMenuItem
+            // 
+            this.invertColorToolStripMenuItem.Name = "invertColorToolStripMenuItem";
+            this.invertColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.invertColorToolStripMenuItem.Text = "InvertColor";
+            this.invertColorToolStripMenuItem.Click += new System.EventHandler(this.invertColorToolStripMenuItem_Click);
             // 
             // matrixToolStripMenuItem
             // 
@@ -105,10 +117,39 @@
             this.blurToolStripMenuItem,
             this.gaussianToolStripMenuItem,
             this.sobelToolStripMenuItem,
-            this.sobelHorizontalToolStripMenuItem});
+            this.sobelHorizontalToolStripMenuItem,
+            this.sharpeningToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
+            // 
+            // blurToolStripMenuItem
+            // 
+            this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
+            this.blurToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.blurToolStripMenuItem.Text = "Blur";
+            this.blurToolStripMenuItem.Click += new System.EventHandler(this.blurToolStripMenuItem_Click);
+            // 
+            // gaussianToolStripMenuItem
+            // 
+            this.gaussianToolStripMenuItem.Name = "gaussianToolStripMenuItem";
+            this.gaussianToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.gaussianToolStripMenuItem.Text = "Gaussian";
+            this.gaussianToolStripMenuItem.Click += new System.EventHandler(this.gaussianToolStripMenuItem_Click);
+            // 
+            // sobelToolStripMenuItem
+            // 
+            this.sobelToolStripMenuItem.Name = "sobelToolStripMenuItem";
+            this.sobelToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.sobelToolStripMenuItem.Text = "SobelVertical";
+            this.sobelToolStripMenuItem.Click += new System.EventHandler(this.sobelToolStripMenuItem_Click);
+            // 
+            // sobelHorizontalToolStripMenuItem
+            // 
+            this.sobelHorizontalToolStripMenuItem.Name = "sobelHorizontalToolStripMenuItem";
+            this.sobelHorizontalToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.sobelHorizontalToolStripMenuItem.Text = "SobelHorizontal";
+            this.sobelHorizontalToolStripMenuItem.Click += new System.EventHandler(this.sobelHorizontalToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -124,13 +165,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // invertColorToolStripMenuItem
-            // 
-            this.invertColorToolStripMenuItem.Name = "invertColorToolStripMenuItem";
-            this.invertColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.invertColorToolStripMenuItem.Text = "InvertColor";
-            this.invertColorToolStripMenuItem.Click += new System.EventHandler(this.invertColorToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -160,33 +194,26 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // blurToolStripMenuItem
+            // blackWhiteToolStripMenuItem
             // 
-            this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
-            this.blurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.blurToolStripMenuItem.Text = "Blur";
-            this.blurToolStripMenuItem.Click += new System.EventHandler(this.blurToolStripMenuItem_Click);
+            this.blackWhiteToolStripMenuItem.Name = "blackWhiteToolStripMenuItem";
+            this.blackWhiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blackWhiteToolStripMenuItem.Text = "BlackWhite";
+            this.blackWhiteToolStripMenuItem.Click += new System.EventHandler(this.blackWhiteToolStripMenuItem_Click);
             // 
-            // gaussianToolStripMenuItem
+            // sharpeningToolStripMenuItem
             // 
-            this.gaussianToolStripMenuItem.Name = "gaussianToolStripMenuItem";
-            this.gaussianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gaussianToolStripMenuItem.Text = "Gaussian";
-            this.gaussianToolStripMenuItem.Click += new System.EventHandler(this.gaussianToolStripMenuItem_Click);
+            this.sharpeningToolStripMenuItem.Name = "sharpeningToolStripMenuItem";
+            this.sharpeningToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sharpeningToolStripMenuItem.Text = "Sharpening";
+            this.sharpeningToolStripMenuItem.Click += new System.EventHandler(this.sharpeningToolStripMenuItem_Click);
             // 
-            // sobelToolStripMenuItem
+            // addConstantToolStripMenuItem
             // 
-            this.sobelToolStripMenuItem.Name = "sobelToolStripMenuItem";
-            this.sobelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sobelToolStripMenuItem.Text = "SobelVertical";
-            this.sobelToolStripMenuItem.Click += new System.EventHandler(this.sobelToolStripMenuItem_Click);
-            // 
-            // sobelHorizontalToolStripMenuItem
-            // 
-            this.sobelHorizontalToolStripMenuItem.Name = "sobelHorizontalToolStripMenuItem";
-            this.sobelHorizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sobelHorizontalToolStripMenuItem.Text = "SobelHorizontal";
-            this.sobelHorizontalToolStripMenuItem.Click += new System.EventHandler(this.sobelHorizontalToolStripMenuItem_Click);
+            this.addConstantToolStripMenuItem.Name = "addConstantToolStripMenuItem";
+            this.addConstantToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addConstantToolStripMenuItem.Text = "AddConstant";
+            this.addConstantToolStripMenuItem.Click += new System.EventHandler(this.addConstantToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -227,6 +254,9 @@
         private System.Windows.Forms.ToolStripMenuItem gaussianToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobelHorizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blackWhiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharpeningToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addConstantToolStripMenuItem;
     }
 }
 

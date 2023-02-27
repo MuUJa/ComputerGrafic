@@ -53,6 +53,8 @@
     <Compile Include="GaussianFilter.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="LocalBinImage.cs" />
+    <Compile Include="MMClose.cs" />
+    <Compile Include="MMOpen.cs" />
     <Compile Include="MatrixFilter.cs" />
     <Compile Include="MaxFilter.cs" />
     <Compile Include="MedianFilter.cs" />

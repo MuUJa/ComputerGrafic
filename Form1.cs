@@ -170,5 +170,17 @@ namespace ComputerGrafic
             MyFilter filter2 = new AddConstantFilter(100);
             backgroundWorker1.RunWorkerAsync(filter2);
         }
+
+        private void mMOpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMOpen(5);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void mMCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMClose(5);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

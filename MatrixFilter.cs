@@ -18,9 +18,8 @@ namespace ComputerGrafic
             int radiusY = kernel.GetLength(1) / 2;
 
             double resultA = sourceImage.GetPixel(x, y).A;
-            double resultR = 0;
-            double resultG = 0;
-            double resultB = 0;
+            double resultR = 0, resultG = 0, resultB = 0;
+            DefaultSet(ref resultR, ref resultG, ref resultB);
             for (int i = -radiusY; i <= radiusY; i++)
             {
                 for (int j = -radiusX; j <= radiusX; j++)
@@ -29,9 +28,9 @@ namespace ComputerGrafic
                     int idY = Clamp(y + j, 0, sourceImage.Height - 1);
                     Color neighborColor = sourceImage.GetPixel(idX, idY);
                     //resultA += neighborColor.A * kernel[j + radiusX, i + radiusY];
-                    resultR += neighborColor.R * kernel[j + radiusX, i + radiusY];
-                    resultG += neighborColor.G * kernel[j + radiusX, i + radiusY];
-                    resultB += neighborColor.B * kernel[j + radiusX, i + radiusY];
+                    resultR = CalculateComponent(resultR, neighborColor.R, j + radiusX, i + radiusY);
+                    resultG = CalculateComponent(resultG, neighborColor.G, j + radiusX, i + radiusY);
+                    resultB = CalculateComponent(resultB, neighborColor.B, j + radiusX, i + radiusY);
                 }
             }
             //resultA = Clamp((int)resultA, 0, 255);
@@ -41,6 +40,14 @@ namespace ComputerGrafic
 
             return Color.FromArgb((int)resultA, (int)resultR, (int)resultG, (int)resultB);
             //return Color.FromArgb((int)resultR, (int)resultG, (int)resultB);
+        }
+        protected virtual double CalculateComponent(double result, int cur_color, int x, int y)
+        {
+            return (result + cur_color * kernel[x, y]);
+        }
+        protected virtual void DefaultSet(ref double R, ref double G, ref double B)
+        {
+            R = 0; G = 0; B = 0;
         }
     }
 }

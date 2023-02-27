@@ -105,7 +105,7 @@ namespace ComputerGrafic
 
         private void gaussianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new GaussianFilter(3, 2);
+            MyFilter filter = new GaussianFilter(2, 0.84);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -114,12 +114,6 @@ namespace ComputerGrafic
             MyFilter filter = new SobelFilter();
             backgroundWorker1.RunWorkerAsync(filter);
             
-        }
-
-        private void sobelHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MyFilter filter = new SobelFilter(false);
-            backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void blackWhiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +132,43 @@ namespace ComputerGrafic
         {
             MyFilter filter = new AddConstantFilter(-20);
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void binImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new BinImage();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void medianFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MedianFilter(1);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+        private void shcharrsOperatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Shcharr();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void pruitOperatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Pruit();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MaxFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void embossingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Embossing();
+            backgroundWorker1.RunWorkerAsync(filter);
+            MyFilter filter2 = new AddConstantFilter(100);
+            backgroundWorker1.RunWorkerAsync(filter2);
         }
     }
 }

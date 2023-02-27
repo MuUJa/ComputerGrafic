@@ -10,11 +10,11 @@ namespace ComputerGrafic
     {
         public BlurFilter(int size)
         {
-            kernel = new float[size, size];
+            kernel = new double[size, size];
             for (int i = 0; i < size; i++)
                 for (int j = 0; j < size; j++)
                 {
-                    kernel[i, j] = 1.0f / (float)(size * size);
+                    kernel[i, j] = 1.0 / (double)(size * size);
                 }
         }
     }

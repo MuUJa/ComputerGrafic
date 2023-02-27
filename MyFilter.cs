@@ -12,8 +12,8 @@ namespace ComputerGrafic
     {
         public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
+            PreProcessImage(sourceImage);
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
-
             for (int i = 0; i < sourceImage.Width; i++)
             {
                 worker.ReportProgress((int)((float)i / resultImage.Width * 100));
@@ -37,6 +37,7 @@ namespace ComputerGrafic
                 return max;
             return value;
         }
+        protected virtual void PreProcessImage(Bitmap sourceImage) { return; }
         protected abstract Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y);
     }
 }

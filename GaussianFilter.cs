@@ -8,16 +8,16 @@ namespace ComputerGrafic
 {
     internal class GaussianFilter : MatrixFilter
     {
-        public GaussianFilter(int radius, int sigma) { CreateGaussianKernel(radius, sigma); }
-        public void CreateGaussianKernel(int radius, float sigma)
+        public GaussianFilter(int radius, double sigma) { CreateGaussianKernel(radius, sigma); }
+        public void CreateGaussianKernel(int radius, double sigma)
         {
             int size = radius * 2 + 1;
-            kernel = new float[size, size];
-            float normalizer = 0;
+            kernel = new double[size, size];
+            double normalizer = 0;
             for (int i = -radius; i < radius; i++)
                 for (int j = -radius; j < radius; j++)
                 {
-                    kernel[i + radius, j + radius] = (float)(Math.Exp(-i*i + j*j) / (sigma * sigma));
+                    kernel[i + radius, j + radius] = (double)(Math.Exp(-i*i + j*j) / (sigma * sigma));
                     normalizer += kernel[i + radius, j + radius];
                 }
             for (int i = 0; i < size; i++)

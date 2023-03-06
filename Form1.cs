@@ -130,7 +130,7 @@ namespace ComputerGrafic
 
         private void addConstantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new AddConstantFilter(-20);
+            MyFilter filter = new AddConstantFilter(-10);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -173,26 +173,64 @@ namespace ComputerGrafic
 
         private void mMErosionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMDilatation(5);
+            MyFilter filter = new MMDilatation(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void mMDilatationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMErosion(5);
+            MyFilter filter = new MMErosion(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void mMOpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMOpen(3);
+            MyFilter filter = new MMOpen(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
         private void mMCloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MyFilter filter = new MMClose(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+        private void mMGragientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMGradient(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+        private void linearIntensityStretchingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new LinearIntensityStretching();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
 
+        private void grayWorldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new GrayWorld();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+        private void perfectReflectorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new PerfectReflector();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+        private void glowingEdgeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new GlowingEdge(3);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void transferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Transfer(50,0);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void rotationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Rotation(400, 630, 0.5*Math.PI );
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
         private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new MotionBlur(5);
@@ -210,5 +248,6 @@ namespace ComputerGrafic
             MyFilter filter = new GlassEffect();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
     }
 }

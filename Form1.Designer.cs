@@ -21,6 +21,42 @@
         }
 
         #region Код, автоматически созданный конструктором форм Windows
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filtersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matrixToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem invertColorToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem blurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gaussianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blackWhiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharpeningToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addConstantToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem globalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem binImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shcharrsOperatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pruitOperatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem embossingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMErosionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linearIntensityStretchingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grayWorldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfectReflectorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMGragientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
 
         /// <summary>
         /// Требуемый метод для поддержки конструктора — не изменяйте 
@@ -168,7 +204,7 @@
             this.mMDilatationToolStripMenuItem,
             this.mMOpenToolStripMenuItem,
             this.mMCloseToolStripMenuItem,
-            this.mMGragientToolStripMenuItem});
+            this.mMGragientToolStripMenuItem,
             this.glowingEdgeToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -387,45 +423,7 @@
             this.PerformLayout();
 
         }
-
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filtersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem localToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem matrixToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem invertColorToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ToolStripMenuItem blurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gaussianToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem blackWhiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sharpeningToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addConstantToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem globalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem binImageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shcharrsOperatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pruitOperatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem embossingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMErosionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem linearIntensityStretchingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem grayWorldToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perfectReflectorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMGragientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
     }
 }
 

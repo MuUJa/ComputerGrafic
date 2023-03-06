@@ -21,42 +21,6 @@
         }
 
         #region Код, автоматически созданный конструктором форм Windows
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filtersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem localToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem matrixToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem invertColorToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ToolStripMenuItem blurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gaussianToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem blackWhiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sharpeningToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addConstantToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem globalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem binImageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shcharrsOperatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pruitOperatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem embossingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMErosionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem linearIntensityStretchingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem grayWorldToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perfectReflectorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mMGragientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
 
         /// <summary>
         /// Требуемый метод для поддержки конструктора — не изменяйте 
@@ -93,6 +57,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.motionBlurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glassEffectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linearIntensityStretchingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grayWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfectReflectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -155,6 +122,8 @@
             this.blackWhiteToolStripMenuItem,
             this.addConstantToolStripMenuItem,
             this.toolStripMenuItem1,
+            this.sepiaToolStripMenuItem,
+            this.glassEffectToolStripMenuItem,
             this.transferToolStripMenuItem,
             this.rotationToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
@@ -193,6 +162,7 @@
             // 
             this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.blurToolStripMenuItem,
+            this.motionBlurToolStripMenuItem,
             this.gaussianToolStripMenuItem,
             this.sobelToolStripMenuItem,
             this.sharpeningToolStripMenuItem,
@@ -355,6 +325,26 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // motionBlurToolStripMenuItem
+            // 
+            this.motionBlurToolStripMenuItem.Name = "motionBlurToolStripMenuItem";
+            this.motionBlurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motionBlurToolStripMenuItem.Text = "Motion Blur";
+            this.motionBlurToolStripMenuItem.Click += new System.EventHandler(this.motionBlurToolStripMenuItem_Click);
+            // 
+            // sepiaToolStripMenuItem
+            // 
+            this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sepiaToolStripMenuItem.Text = "Sepia";
+            this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
+            // 
+            // glassEffectToolStripMenuItem
+            // 
+            this.glassEffectToolStripMenuItem.Name = "glassEffectToolStripMenuItem";
+            this.glassEffectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glassEffectToolStripMenuItem.Text = "Glass Effect";
+            this.glassEffectToolStripMenuItem.Click += new System.EventHandler(this.glassEffectToolStripMenuItem_Click);
             // linearIntensityStretchingToolStripMenuItem
             // 
             this.linearIntensityStretchingToolStripMenuItem.Name = "linearIntensityStretchingToolStripMenuItem";
@@ -424,6 +414,45 @@
 
         }
         #endregion
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filtersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matrixToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem invertColorToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem blurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gaussianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blackWhiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharpeningToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addConstantToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem globalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem binImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shcharrsOperatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pruitOperatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem embossingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMErosionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linearIntensityStretchingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grayWorldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfectReflectorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMGragientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motionBlurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glassEffectToolStripMenuItem;
     }
 }
 

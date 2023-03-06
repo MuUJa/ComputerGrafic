@@ -231,5 +231,23 @@ namespace ComputerGrafic
             MyFilter filter = new Rotation(400, 630, 0.5*Math.PI );
             backgroundWorker1.RunWorkerAsync(filter);
         }
+        private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MotionBlur(5);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Sepia();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void glassEffectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new GlassEffect();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
     }
 }

@@ -209,13 +209,27 @@ namespace ComputerGrafic
             MyFilter filter = new GrayWorld();
             backgroundWorker1.RunWorkerAsync(filter);
         }
-
         private void perfectReflectorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new PerfectReflector();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+        private void glowingEdgeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new GlowingEdge(3);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
 
-        
+        private void transferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Transfer(50,0);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void rotationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new Rotation(400, 630, 0.5*Math.PI );
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

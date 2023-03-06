@@ -61,6 +61,9 @@
             this.grayWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfectReflectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mMGragientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glowingEdgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +118,9 @@
             this.invertColorToolStripMenuItem,
             this.blackWhiteToolStripMenuItem,
             this.addConstantToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.transferToolStripMenuItem,
+            this.rotationToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
             this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.localToolStripMenuItem.Text = "Spot";
@@ -164,6 +169,7 @@
             this.mMOpenToolStripMenuItem,
             this.mMCloseToolStripMenuItem,
             this.mMGragientToolStripMenuItem});
+            this.glowingEdgeToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -340,6 +346,26 @@
             this.mMGragientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mMGragientToolStripMenuItem.Text = "MMGragient";
             this.mMGragientToolStripMenuItem.Click += new System.EventHandler(this.mMGragientToolStripMenuItem_Click);
+            // glowingEdgeToolStripMenuItem
+            // 
+            this.glowingEdgeToolStripMenuItem.Name = "glowingEdgeToolStripMenuItem";
+            this.glowingEdgeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glowingEdgeToolStripMenuItem.Text = "GlowingEdge";
+            this.glowingEdgeToolStripMenuItem.Click += new System.EventHandler(this.glowingEdgeToolStripMenuItem_Click);
+            // 
+            // transferToolStripMenuItem
+            // 
+            this.transferToolStripMenuItem.Name = "transferToolStripMenuItem";
+            this.transferToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transferToolStripMenuItem.Text = "Transfer";
+            this.transferToolStripMenuItem.Click += new System.EventHandler(this.transferToolStripMenuItem_Click);
+            // 
+            // rotationToolStripMenuItem
+            // 
+            this.rotationToolStripMenuItem.Name = "rotationToolStripMenuItem";
+            this.rotationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rotationToolStripMenuItem.Text = "Rotation";
+            this.rotationToolStripMenuItem.Click += new System.EventHandler(this.rotationToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -397,6 +423,9 @@
         private System.Windows.Forms.ToolStripMenuItem grayWorldToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perfectReflectorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMGragientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
     }
 }
 

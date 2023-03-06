@@ -171,16 +171,26 @@ namespace ComputerGrafic
             backgroundWorker1.RunWorkerAsync(filter2);
         }
 
-        private void mMOpenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mMErosionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new MMDilatation(5);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void mMCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mMDilatationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new MMErosion(5);
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void mMOpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMOpen(3);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+        private void mMCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -47,14 +47,16 @@
             this.shcharrsOperatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruitOperatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.embossingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mMErosionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mMDilatationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mMOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mMCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.globalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.binImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.mMOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mMCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +155,8 @@
             this.shcharrsOperatorToolStripMenuItem,
             this.pruitOperatorToolStripMenuItem,
             this.embossingToolStripMenuItem,
+            this.mMErosionToolStripMenuItem,
+            this.mMDilatationToolStripMenuItem,
             this.mMOpenToolStripMenuItem,
             this.mMCloseToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
@@ -215,6 +219,34 @@
             this.embossingToolStripMenuItem.Text = "Embossing";
             this.embossingToolStripMenuItem.Click += new System.EventHandler(this.embossingToolStripMenuItem_Click);
             // 
+            // mMErosionToolStripMenuItem
+            // 
+            this.mMErosionToolStripMenuItem.Name = "mMErosionToolStripMenuItem";
+            this.mMErosionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mMErosionToolStripMenuItem.Text = "MMDilatation";
+            this.mMErosionToolStripMenuItem.Click += new System.EventHandler(this.mMErosionToolStripMenuItem_Click);
+            // 
+            // mMDilatationToolStripMenuItem
+            // 
+            this.mMDilatationToolStripMenuItem.Name = "mMDilatationToolStripMenuItem";
+            this.mMDilatationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mMDilatationToolStripMenuItem.Text = "MMErosion";
+            this.mMDilatationToolStripMenuItem.Click += new System.EventHandler(this.mMDilatationToolStripMenuItem_Click);
+            // 
+            // mMOpenToolStripMenuItem
+            // 
+            this.mMOpenToolStripMenuItem.Name = "mMOpenToolStripMenuItem";
+            this.mMOpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mMOpenToolStripMenuItem.Text = "MMOpen";
+            this.mMOpenToolStripMenuItem.Click += new System.EventHandler(this.mMOpenToolStripMenuItem_Click);
+            // 
+            // mMCloseToolStripMenuItem
+            // 
+            this.mMCloseToolStripMenuItem.Name = "mMCloseToolStripMenuItem";
+            this.mMCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mMCloseToolStripMenuItem.Text = "MMClose";
+            this.mMCloseToolStripMenuItem.Click += new System.EventHandler(this.mMCloseToolStripMenuItem_Click);
+            // 
             // globalToolStripMenuItem
             // 
             this.globalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -273,20 +305,6 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // mMOpenToolStripMenuItem
-            // 
-            this.mMOpenToolStripMenuItem.Name = "mMOpenToolStripMenuItem";
-            this.mMOpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMOpenToolStripMenuItem.Text = "MMOpen";
-            this.mMOpenToolStripMenuItem.Click += new System.EventHandler(this.mMOpenToolStripMenuItem_Click);
-            // 
-            // mMCloseToolStripMenuItem
-            // 
-            this.mMCloseToolStripMenuItem.Name = "mMCloseToolStripMenuItem";
-            this.mMCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMCloseToolStripMenuItem.Text = "MMClose";
-            this.mMCloseToolStripMenuItem.Click += new System.EventHandler(this.mMCloseToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +353,8 @@
         private System.Windows.Forms.ToolStripMenuItem pruitOperatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem embossingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMErosionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
     }

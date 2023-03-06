@@ -10,7 +10,7 @@ namespace ComputerGrafic
 {
     abstract class MyFilter
     {
-        public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
+        public virtual Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
             PreProcessImage(sourceImage);
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);

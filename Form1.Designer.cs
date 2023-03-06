@@ -60,6 +60,8 @@
             this.glowingEdgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalWavesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalWavesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +118,9 @@
             this.addConstantToolStripMenuItem,
             this.toolStripMenuItem1,
             this.transferToolStripMenuItem,
-            this.rotationToolStripMenuItem});
+            this.rotationToolStripMenuItem,
+            this.horizontalWavesToolStripMenuItem,
+            this.verticalWavesToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
             this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.localToolStripMenuItem.Text = "Spot";
@@ -332,6 +336,20 @@
             this.rotationToolStripMenuItem.Text = "Rotation";
             this.rotationToolStripMenuItem.Click += new System.EventHandler(this.rotationToolStripMenuItem_Click);
             // 
+            // horizontalWavesToolStripMenuItem
+            // 
+            this.horizontalWavesToolStripMenuItem.Name = "horizontalWavesToolStripMenuItem";
+            this.horizontalWavesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horizontalWavesToolStripMenuItem.Text = "HorizontalWaves";
+            this.horizontalWavesToolStripMenuItem.Click += new System.EventHandler(this.horizontalWavesToolStripMenuItem_Click);
+            // 
+            // verticalWavesToolStripMenuItem
+            // 
+            this.verticalWavesToolStripMenuItem.Name = "verticalWavesToolStripMenuItem";
+            this.verticalWavesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verticalWavesToolStripMenuItem.Text = "VerticalWaves";
+            this.verticalWavesToolStripMenuItem.Click += new System.EventHandler(this.verticalWavesToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +405,8 @@
         private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalWavesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalWavesToolStripMenuItem;
     }
 }
 

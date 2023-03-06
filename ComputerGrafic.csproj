@@ -52,6 +52,7 @@
     <Compile Include="Embossing.cs" />
     <Compile Include="GaussianFilter.cs" />
     <Compile Include="GlowingEdge.cs" />
+    <Compile Include="HorizontalWaves.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="LocalBinImage.cs" />
     <Compile Include="MMClose.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Shcharr.cs" />
     <Compile Include="SobelFilter.cs" />
     <Compile Include="Transfer.cs" />
+    <Compile Include="VerticalWaves.cs" />
     <Compile Include="WBFilter.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -10,10 +10,11 @@ namespace ComputerGrafic
 
     internal class GlassEffect : MyFilter
     {
+        Random rand;
+        public GlassEffect() { rand = new Random(); }
         protected override Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
             Color color = sourceImage.GetPixel(x, y);
-            Random rand = new Random();
             int idX = (int)(x + (rand.NextDouble() - 0.5) * 10);
             int idY = (int)(y + (rand.NextDouble() - 0.5) * 10);
             if (Check(idX, 0, sourceImage.Width - 1) && Check(idY, 0, sourceImage.Height - 1))

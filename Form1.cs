@@ -193,7 +193,11 @@ namespace ComputerGrafic
             MyFilter filter = new MMClose(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
-
+        private void mMGragientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMGradient(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
         private void linearIntensityStretchingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new LinearIntensityStretching();
@@ -211,5 +215,7 @@ namespace ComputerGrafic
             MyFilter filter = new PerfectReflector();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        
     }
 }

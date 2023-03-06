@@ -10,22 +10,22 @@ namespace ComputerGrafic
 {
     internal class MMClose : MyFilter
     {
-        MyFilter filter1;
-        MyFilter filter2;
+        MyFilter filter_erosion;
+        MyFilter filter_dilatation;
         public MMClose(int size) {
-            filter1 = new MMErosion(size);
-            filter2 = new MMDilatation(size);
+            filter_erosion = new MMErosion(size);
+            filter_dilatation = new MMDilatation(size);
         }
         public MMClose(double[,] kernel)
         {
-            filter1 = new MMErosion(kernel);
-            filter2 = new MMDilatation(kernel);
+            filter_erosion = new MMErosion(kernel);
+            filter_dilatation = new MMDilatation(kernel);
         }
         public override Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {   
-            Bitmap bitmap1 = filter1.processImage(sourceImage, worker);
-            Bitmap bitmap2 = filter2.processImage(bitmap1, worker);
-            return bitmap2;
+            Bitmap erosion = filter_erosion.processImage(sourceImage, worker);
+            Bitmap result = filter_dilatation.processImage(erosion, worker);
+            return result;
         }
         protected override Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y) { return Color.Black; } 
     }

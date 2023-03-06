@@ -60,6 +60,7 @@
             this.linearIntensityStretchingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grayWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfectReflectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mMGragientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -161,7 +162,8 @@
             this.mMErosionToolStripMenuItem,
             this.mMDilatationToolStripMenuItem,
             this.mMOpenToolStripMenuItem,
-            this.mMCloseToolStripMenuItem});
+            this.mMCloseToolStripMenuItem,
+            this.mMGragientToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -332,6 +334,13 @@
             this.perfectReflectorToolStripMenuItem.Text = "PerfectReflector";
             this.perfectReflectorToolStripMenuItem.Click += new System.EventHandler(this.perfectReflectorToolStripMenuItem_Click);
             // 
+            // mMGragientToolStripMenuItem
+            // 
+            this.mMGragientToolStripMenuItem.Name = "mMGragientToolStripMenuItem";
+            this.mMGragientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mMGragientToolStripMenuItem.Text = "MMGragient";
+            this.mMGragientToolStripMenuItem.Click += new System.EventHandler(this.mMGragientToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +396,7 @@
         private System.Windows.Forms.ToolStripMenuItem linearIntensityStretchingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grayWorldToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perfectReflectorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mMGragientToolStripMenuItem;
     }
 }
 

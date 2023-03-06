@@ -61,6 +61,7 @@
     <Compile Include="MatrixFilter.cs" />
     <Compile Include="MaxFilter.cs" />
     <Compile Include="MedianFilter.cs" />
+    <Compile Include="MMGradient.cs" />
     <Compile Include="MMOpen.cs" />
     <Compile Include="MyFilter.cs" />
     <Compile Include="Form1.cs">

@@ -231,6 +231,17 @@ namespace ComputerGrafic
             MyFilter filter = new Rotation(400, 630, 0.5*Math.PI );
             backgroundWorker1.RunWorkerAsync(filter);
         }
+        private void horizontalWavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new HorizontalWaves();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void verticalWavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new VerticalWaves();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
         private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new MotionBlur(5);
@@ -248,6 +259,5 @@ namespace ComputerGrafic
             MyFilter filter = new GlassEffect();
             backgroundWorker1.RunWorkerAsync(filter);
         }
-
     }
 }

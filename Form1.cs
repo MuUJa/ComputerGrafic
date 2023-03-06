@@ -130,7 +130,7 @@ namespace ComputerGrafic
 
         private void addConstantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new AddConstantFilter(-20);
+            MyFilter filter = new AddConstantFilter(-10);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -203,6 +203,12 @@ namespace ComputerGrafic
         private void grayWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new GrayWorld();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void perfectReflectorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new PerfectReflector();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }

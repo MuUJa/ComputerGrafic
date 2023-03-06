@@ -57,6 +57,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.glowingEdgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +114,9 @@
             this.invertColorToolStripMenuItem,
             this.blackWhiteToolStripMenuItem,
             this.addConstantToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.transferToolStripMenuItem,
+            this.rotationToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
             this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.localToolStripMenuItem.Text = "Spot";
@@ -158,7 +163,8 @@
             this.mMErosionToolStripMenuItem,
             this.mMDilatationToolStripMenuItem,
             this.mMOpenToolStripMenuItem,
-            this.mMCloseToolStripMenuItem});
+            this.mMCloseToolStripMenuItem,
+            this.glowingEdgeToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
             this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
@@ -305,6 +311,27 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // glowingEdgeToolStripMenuItem
+            // 
+            this.glowingEdgeToolStripMenuItem.Name = "glowingEdgeToolStripMenuItem";
+            this.glowingEdgeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glowingEdgeToolStripMenuItem.Text = "GlowingEdge";
+            this.glowingEdgeToolStripMenuItem.Click += new System.EventHandler(this.glowingEdgeToolStripMenuItem_Click);
+            // 
+            // transferToolStripMenuItem
+            // 
+            this.transferToolStripMenuItem.Name = "transferToolStripMenuItem";
+            this.transferToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transferToolStripMenuItem.Text = "Transfer";
+            this.transferToolStripMenuItem.Click += new System.EventHandler(this.transferToolStripMenuItem_Click);
+            // 
+            // rotationToolStripMenuItem
+            // 
+            this.rotationToolStripMenuItem.Name = "rotationToolStripMenuItem";
+            this.rotationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rotationToolStripMenuItem.Text = "Rotation";
+            this.rotationToolStripMenuItem.Click += new System.EventHandler(this.rotationToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +384,9 @@
         private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glowingEdgeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotationToolStripMenuItem;
     }
 }
 

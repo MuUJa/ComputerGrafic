@@ -51,6 +51,7 @@
     <Compile Include="BlurFilter.cs" />
     <Compile Include="Embossing.cs" />
     <Compile Include="GaussianFilter.cs" />
+    <Compile Include="GlowingEdge.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="LocalBinImage.cs" />
     <Compile Include="MMClose.cs" />
@@ -70,9 +71,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pruit.cs" />
+    <Compile Include="Rotation.cs" />
     <Compile Include="Sharpning.cs" />
     <Compile Include="Shcharr.cs" />
     <Compile Include="SobelFilter.cs" />
+    <Compile Include="Transfer.cs" />
     <Compile Include="WBFilter.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

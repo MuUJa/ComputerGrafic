@@ -57,6 +57,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.motionBlurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glassEffectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +114,9 @@
             this.invertColorToolStripMenuItem,
             this.blackWhiteToolStripMenuItem,
             this.addConstantToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.sepiaToolStripMenuItem,
+            this.glassEffectToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
             this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.localToolStripMenuItem.Text = "Spot";
@@ -148,6 +153,7 @@
             // 
             this.matrixToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.blurToolStripMenuItem,
+            this.motionBlurToolStripMenuItem,
             this.gaussianToolStripMenuItem,
             this.sobelToolStripMenuItem,
             this.sharpeningToolStripMenuItem,
@@ -305,6 +311,27 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // motionBlurToolStripMenuItem
+            // 
+            this.motionBlurToolStripMenuItem.Name = "motionBlurToolStripMenuItem";
+            this.motionBlurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motionBlurToolStripMenuItem.Text = "Motion Blur";
+            this.motionBlurToolStripMenuItem.Click += new System.EventHandler(this.motionBlurToolStripMenuItem_Click);
+            // 
+            // sepiaToolStripMenuItem
+            // 
+            this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sepiaToolStripMenuItem.Text = "Sepia";
+            this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
+            // 
+            // glassEffectToolStripMenuItem
+            // 
+            this.glassEffectToolStripMenuItem.Name = "glassEffectToolStripMenuItem";
+            this.glassEffectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glassEffectToolStripMenuItem.Text = "Glass Effect";
+            this.glassEffectToolStripMenuItem.Click += new System.EventHandler(this.glassEffectToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +384,9 @@
         private System.Windows.Forms.ToolStripMenuItem mMDilatationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMOpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mMCloseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motionBlurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glassEffectToolStripMenuItem;
     }
 }
 

@@ -51,6 +51,7 @@
     <Compile Include="BlurFilter.cs" />
     <Compile Include="Embossing.cs" />
     <Compile Include="GaussianFilter.cs" />
+    <Compile Include="GrayWorld.cs" />
     <Compile Include="InvertFilter.cs" />
     <Compile Include="LinearIntensityStretching.cs" />
     <Compile Include="LocalBinImage.cs" />

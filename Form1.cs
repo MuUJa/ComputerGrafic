@@ -199,5 +199,11 @@ namespace ComputerGrafic
             MyFilter filter = new LinearIntensityStretching();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void grayWorldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new GrayWorld();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

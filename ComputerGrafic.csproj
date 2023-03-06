@@ -52,6 +52,7 @@
     <Compile Include="Embossing.cs" />
     <Compile Include="GaussianFilter.cs" />
     <Compile Include="InvertFilter.cs" />
+    <Compile Include="LinearIntensityStretching.cs" />
     <Compile Include="LocalBinImage.cs" />
     <Compile Include="MMClose.cs" />
     <Compile Include="MMErosion.cs" />

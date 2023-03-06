@@ -10,12 +10,19 @@ namespace ComputerGrafic
 {
     internal class MMClose : MyFilter
     {
-        int size;
-        public MMClose(int size) { this.size = size; }
+        MyFilter filter1;
+        MyFilter filter2;
+        public MMClose(int size) {
+            filter1 = new MMErosion(size);
+            filter2 = new MMDilatation(size);
+        }
+        public MMClose(double[,] kernel)
+        {
+            filter1 = new MMErosion(kernel);
+            filter2 = new MMDilatation(kernel);
+        }
         public override Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {   
-            MyFilter filter1 = new MMErosion(size);
-            MyFilter filter2 = new MMDilatation(size);
             Bitmap bitmap1 = filter1.processImage(sourceImage, worker);
             Bitmap bitmap2 = filter2.processImage(bitmap1, worker);
             return bitmap2;

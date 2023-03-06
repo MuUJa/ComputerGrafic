@@ -173,24 +173,31 @@ namespace ComputerGrafic
 
         private void mMErosionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMDilatation(5);
+            MyFilter filter = new MMDilatation(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void mMDilatationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMErosion(5);
+            MyFilter filter = new MMErosion(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void mMOpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMOpen(3);
+            MyFilter filter = new MMOpen(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
             backgroundWorker1.RunWorkerAsync(filter);
         }
         private void mMCloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MyFilter filter = new MMClose(new double[,] { { 0, 1, 0 }, { 1, 1, 1 }, { 0, 1, 0 } });
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
 
+        private void linearIntensityStretchingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new LinearIntensityStretching();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }

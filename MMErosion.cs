@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputerGrafic
 {
-    internal class MMClose : MatrixFilter
+    internal class MMErosion : MatrixFilter
     {
-        public MMClose(int size = 3)
+        public MMErosion(int size = 3)
         {
             kernel = new double[size, size];
             for (int i = 0; i < 3; i++)

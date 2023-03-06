@@ -173,13 +173,13 @@ namespace ComputerGrafic
 
         private void mMOpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMOpen(5);
+            MyFilter filter = new MMDilatation(5);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void mMCloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MMClose(5);
+            MyFilter filter = new MMErosion(5);
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }

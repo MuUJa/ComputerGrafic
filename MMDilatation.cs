@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ComputerGrafic
 {
-    internal class MMOpen : MatrixFilter
+    internal class MMDilatation : MatrixFilter
     {
-        public MMOpen(int size = 3)
+        public MMDilatation(int size = 3)
         {
             kernel = new double[size, size];
             for (int i = 0; i < 3; i++)

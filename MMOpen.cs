@@ -10,15 +10,25 @@ namespace ComputerGrafic
 {
     internal class MMOpen : MatrixFilter
     {
-        int size;
-        public MMOpen(int size) { this.size = size; }
+        MyFilter filter_dilatation;
+        MyFilter filter_erosion;
+
+        public MMOpen(int size) {
+            filter_dilatation = new MMDilatation(size);
+            filter_erosion = new MMErosion(size); 
+        }
+        public MMOpen(double[,] kernel) 
+        { 
+            this.kernel = kernel;
+            filter_dilatation = new MMDilatation(kernel);
+            filter_erosion = new MMErosion(kernel);
+        }
         public override Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
-            MyFilter filter1 = new MMDilatation(size);
-            MyFilter filter2 = new MMErosion(size);
-            Bitmap bitmap1 = filter1.processImage(sourceImage, worker);
-            Bitmap bitmap2 = filter2.processImage(bitmap1, worker);
-            return bitmap2;
+            
+            Bitmap dilatation = filter_dilatation.processImage(sourceImage, worker);
+            Bitmap result = filter_erosion.processImage(dilatation, worker);
+            return result;
         }
     }
 }

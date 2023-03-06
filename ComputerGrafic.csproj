@@ -51,8 +51,10 @@
     <Compile Include="BlurFilter.cs" />
     <Compile Include="Embossing.cs" />
     <Compile Include="GaussianFilter.cs" />
+    <Compile Include="GrayWorld.cs" />
     <Compile Include="GlowingEdge.cs" />
     <Compile Include="InvertFilter.cs" />
+    <Compile Include="LinearIntensityStretching.cs" />
     <Compile Include="LocalBinImage.cs" />
     <Compile Include="MMClose.cs" />
     <Compile Include="MMErosion.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="MatrixFilter.cs" />
     <Compile Include="MaxFilter.cs" />
     <Compile Include="MedianFilter.cs" />
+    <Compile Include="MMGradient.cs" />
     <Compile Include="MMOpen.cs" />
     <Compile Include="MyFilter.cs" />
     <Compile Include="Form1.cs">
@@ -68,6 +71,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PerfectReflector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pruit.cs" />

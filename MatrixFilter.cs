@@ -24,8 +24,8 @@ namespace ComputerGrafic
             {
                 for (int j = -radiusX; j <= radiusX; j++)
                 {
-                    int idX = Clamp(x + i, 0, sourceImage.Width - 1);
-                    int idY = Clamp(y + j, 0, sourceImage.Height - 1);
+                    int idX = Clamp(x + j, 0, sourceImage.Width - 1);
+                    int idY = Clamp(y + i, 0, sourceImage.Height - 1);
                     Color neighborColor = sourceImage.GetPixel(idX, idY);
                     //resultA += neighborColor.A * kernel[j + radiusX, i + radiusY];
                     resultR = CalculateComponent(resultR, neighborColor.R, j + radiusX, i + radiusY);

@@ -83,6 +83,7 @@
     <Compile Include="Sharpning.cs" />
     <Compile Include="Shcharr.cs" />
     <Compile Include="SobelFilter.cs" />
+    <Compile Include="StatisticColorCorrection.cs" />
     <Compile Include="Transfer.cs" />
     <Compile Include="VerticalWaves.cs" />
     <Compile Include="WBFilter.cs" />

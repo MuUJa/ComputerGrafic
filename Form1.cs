@@ -167,8 +167,6 @@ namespace ComputerGrafic
         {
             MyFilter filter = new Embossing();
             backgroundWorker1.RunWorkerAsync(filter);
-            MyFilter filter2 = new AddConstantFilter(100);
-            backgroundWorker1.RunWorkerAsync(filter2);
         }
 
         private void mMErosionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,7 +242,7 @@ namespace ComputerGrafic
         }
         private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFilter filter = new MotionBlur(5);
+            MyFilter filter = new MotionBlur(7);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -257,6 +255,12 @@ namespace ComputerGrafic
         private void glassEffectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MyFilter filter = new GlassEffect();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void statisticColorCorrectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new StatisticColorCorrection();
             backgroundWorker1.RunWorkerAsync(filter);
         }
     }

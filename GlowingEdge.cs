@@ -16,11 +16,9 @@ namespace ComputerGrafic
         {
             MyFilter filter1 = new MedianFilter(size);
             MyFilter filter2 = new SobelFilter( );
-            MyFilter filter3 = new MaxFilter();
             Bitmap bitmap1 = filter1.processImage(sourceImage, worker);
             Bitmap bitmap2 = filter2.processImage(bitmap1, worker);
-            Bitmap bitmap3 = filter2.processImage(bitmap2, worker);
-            return bitmap3;
+            return bitmap2;
         }
     }
 }

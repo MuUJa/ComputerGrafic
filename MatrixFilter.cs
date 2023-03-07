@@ -34,9 +34,9 @@ namespace ComputerGrafic
                 }
             }
             //resultA = Clamp((int)resultA, 0, 255);
-            resultR = Clamp((int)resultR, 0, 255);
-            resultG = Clamp((int)resultG, 0, 255);
-            resultB = Clamp((int)resultB, 0, 255);
+            resultR = NormalizeComponent(resultR);
+            resultG = NormalizeComponent(resultG);
+            resultB = NormalizeComponent(resultB);
 
             return Color.FromArgb((int)resultA, (int)resultR, (int)resultG, (int)resultB);
             //return Color.FromArgb((int)resultR, (int)resultG, (int)resultB);
@@ -48,6 +48,10 @@ namespace ComputerGrafic
         protected virtual void DefaultSet(ref double R, ref double G, ref double B)
         {
             R = 0; G = 0; B = 0;
+        }
+        protected virtual int NormalizeComponent(double component)
+        {
+            return Clamp((int)component, 0, 255);
         }
     }
 }

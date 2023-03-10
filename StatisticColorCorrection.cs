@@ -12,18 +12,8 @@ namespace ComputerGrafic
     {
         Bitmap baseImage;
 
-        double expectR = 0;
-        double expectG = 0;
-        double expectB = 0;
-        double expectR1 = 0;
-        double expectG1 = 0;
-        double expectB1 = 0;
-        double dispersionR = 0;
-        double dispersionG = 0;
-        double dispersionB = 0;
-        double dispersionR1 = 0;
-        double dispersionG1 = 0;
-        double dispersionB1 = 0;
+        double[,] expectation;
+        double[,] dispersion;
         public StatisticColorCorrection()
         {
             OpenFileDialog ofd = new OpenFileDialog
@@ -38,43 +28,44 @@ namespace ComputerGrafic
         }
         protected override void PreProcessImage(Bitmap sourceImage)
         {
-            for (int i = 0; i < baseImage.Width; i++)
-                for (int j = 0; j < baseImage.Height; j++)
-                {
-                    Color color = baseImage.GetPixel(i, j);
-                    int n = baseImage.Width * baseImage.Height;
-                    expectR += color.R / n;
-                    expectG += color.G / n;
-                    expectB += color.B / n;
-                    dispersionR += CalcDispersion(color.R, expectR, n);
-                    dispersionG += CalcDispersion(color.G, expectG, n);
-                    dispersionB += CalcDispersion(color.B, expectB, n);
-                }
-            for (int i = 0; i < sourceImage.Width; i++)
-                for (int j = 0; j < sourceImage.Height; j++)
-                {
-                    Color color = sourceImage.GetPixel(i, j);
-                    int n = sourceImage.Width * sourceImage.Height;
-                    expectR1 += color.R / n;
-                    expectG1 += color.G / n;
-                    expectB1 += color.B / n;
-                    dispersionR1 += CalcDispersion(color.R, expectR, n);
-                    dispersionG1 += CalcDispersion(color.G, expectG, n);
-                    dispersionB1 += CalcDispersion(color.B, expectB, n);
-                }
+            Bitmap [] images = new Bitmap[] {baseImage, sourceImage};
+            expectation = new double[2,3];
+            dispersion = new double[2, 3];
+            for (int t = 0; t < 2; t++)
+            {
+                Bitmap image = images[t];
+                int n = image.Height * image.Width;
+                for (int i = 0; i < image.Width; i++)
+                    for (int j = 0; j < image.Height; j++)
+                    {
+                        Color color = image.GetPixel(i, j);
+                        int[] colorComponent = new int[] { color.R, color.G, color.B };
+                        for (int k = 0; k < colorComponent.Length; k++)
+                        {
+                            int c = colorComponent[k];
+                            expectation[t, k] += c / n;
+                            dispersion[t, k] += CalcDispersion(c, n);
+                        }
+                    }
+            }
         }
-        protected double CalcDispersion(double c, double expect, double n)
+        protected double CalcDispersion(double c, double n)
         {
+            double expect = c / n;
             return (c - expect) * (c - expect) / n;
         }
         protected override Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
             Color color = sourceImage.GetPixel(x, y);
-            double R = expectR + (color.R - expectR1) * dispersionR / dispersionR1;
-            double G = expectG + (color.G - expectG1) * dispersionG / dispersionG1;
-            double B = expectB + (color.B - expectB1) * dispersionB / dispersionB1;
-            return Color.FromArgb(Clamp((int)R, 0, 255),
-                Clamp((int)G, 0, 255), Clamp((int)B, 0, 255));
+            double[] compColor = new double[3] { color.R, color.G, color.B };
+            double[] resCompColor = new double[3];
+            for (int i = 0; i < 3; i++)
+            { 
+                resCompColor[i] = expectation[0, i] + (compColor[i] - expectation[1, i]) *
+                    dispersion[0, i] / dispersion[1, i];
+            }
+            return Color.FromArgb(Clamp((int)resCompColor[0], 0, 255),
+                Clamp((int)resCompColor[1], 0, 255), Clamp((int)resCompColor[2], 0, 255));
         }
     }
 }

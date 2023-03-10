@@ -70,6 +70,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.mathMorfologyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +79,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.filtersToolStripMenuItem});
+            this.filtersToolStripMenuItem,
+            this.mathMorfologyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(685, 24);
@@ -97,14 +99,14 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -132,7 +134,7 @@
             this.horizontalWavesToolStripMenuItem,
             this.verticalWavesToolStripMenuItem});
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
-            this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.localToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.localToolStripMenuItem.Text = "Spot";
             // 
             // invertColorToolStripMenuItem
@@ -217,14 +219,9 @@
             this.shcharrsOperatorToolStripMenuItem,
             this.pruitOperatorToolStripMenuItem,
             this.embossingToolStripMenuItem,
-            this.mMErosionToolStripMenuItem,
-            this.mMDilatationToolStripMenuItem,
-            this.mMOpenToolStripMenuItem,
-            this.mMCloseToolStripMenuItem,
-            this.mMGragientToolStripMenuItem,
             this.glowingEdgeToolStripMenuItem});
             this.matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
-            this.matrixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matrixToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.matrixToolStripMenuItem.Text = "Matrix";
             // 
             // blurToolStripMenuItem
@@ -341,7 +338,7 @@
             this.perfectReflectorToolStripMenuItem,
             this.staticColorCorrectionToolStripMenuItem});
             this.globalToolStripMenuItem.Name = "globalToolStripMenuItem";
-            this.globalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.globalToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.globalToolStripMenuItem.Text = "Global";
             // 
             // binImageToolStripMenuItem
@@ -422,6 +419,18 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // mathMorfologyToolStripMenuItem
+            // 
+            this.mathMorfologyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mMErosionToolStripMenuItem,
+            this.mMDilatationToolStripMenuItem,
+            this.mMOpenToolStripMenuItem,
+            this.mMCloseToolStripMenuItem,
+            this.mMGragientToolStripMenuItem, });
+            this.mathMorfologyToolStripMenuItem.Name = "mathMorfologyToolStripMenuItem";
+            this.mathMorfologyToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.mathMorfologyToolStripMenuItem.Text = "MathMorfology";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +494,7 @@
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem glassEffectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staticColorCorrectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mathMorfologyToolStripMenuItem;
     }
 }
 

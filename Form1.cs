@@ -263,5 +263,11 @@ namespace ComputerGrafic
             MyFilter filter = new StatisticColorCorrection();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void topHatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMTopHat(3);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

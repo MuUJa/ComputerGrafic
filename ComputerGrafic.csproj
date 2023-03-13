@@ -58,6 +58,7 @@
     <Compile Include="InvertFilter.cs" />
     <Compile Include="LinearIntensityStretching.cs" />
     <Compile Include="LocalBinImage.cs" />
+    <Compile Include="MMBlackHat.cs" />
     <Compile Include="MMClose.cs" />
     <Compile Include="MMErosion.cs" />
     <Compile Include="MMDilatation.cs" />

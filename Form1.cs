@@ -269,5 +269,11 @@ namespace ComputerGrafic
             MyFilter filter = new MMTopHat(3);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void blackHatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFilter filter = new MMBlackHat(3);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.topHatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blackHatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -350,7 +351,8 @@
             this.mMOpenToolStripMenuItem,
             this.mMCloseToolStripMenuItem,
             this.mMGragientToolStripMenuItem,
-            this.topHatToolStripMenuItem});
+            this.topHatToolStripMenuItem,
+            this.blackHatToolStripMenuItem});
             this.mathMorfologyToolStripMenuItem.Name = "mathMorfologyToolStripMenuItem";
             this.mathMorfologyToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.mathMorfologyToolStripMenuItem.Text = "MathMorfology";
@@ -359,35 +361,35 @@
             // 
             this.mMErosionToolStripMenuItem.Name = "mMErosionToolStripMenuItem";
             this.mMErosionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMErosionToolStripMenuItem.Text = "MMDilatation";
+            this.mMErosionToolStripMenuItem.Text = "Dilatation";
             this.mMErosionToolStripMenuItem.Click += new System.EventHandler(this.mMErosionToolStripMenuItem_Click);
             // 
             // mMDilatationToolStripMenuItem
             // 
             this.mMDilatationToolStripMenuItem.Name = "mMDilatationToolStripMenuItem";
             this.mMDilatationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMDilatationToolStripMenuItem.Text = "MMErosion";
+            this.mMDilatationToolStripMenuItem.Text = "Erosion";
             this.mMDilatationToolStripMenuItem.Click += new System.EventHandler(this.mMDilatationToolStripMenuItem_Click);
             // 
             // mMOpenToolStripMenuItem
             // 
             this.mMOpenToolStripMenuItem.Name = "mMOpenToolStripMenuItem";
             this.mMOpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMOpenToolStripMenuItem.Text = "MMOpen";
+            this.mMOpenToolStripMenuItem.Text = "Open";
             this.mMOpenToolStripMenuItem.Click += new System.EventHandler(this.mMOpenToolStripMenuItem_Click);
             // 
             // mMCloseToolStripMenuItem
             // 
             this.mMCloseToolStripMenuItem.Name = "mMCloseToolStripMenuItem";
             this.mMCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMCloseToolStripMenuItem.Text = "MMClose";
+            this.mMCloseToolStripMenuItem.Text = "Close";
             this.mMCloseToolStripMenuItem.Click += new System.EventHandler(this.mMCloseToolStripMenuItem_Click);
             // 
             // mMGragientToolStripMenuItem
             // 
             this.mMGragientToolStripMenuItem.Name = "mMGragientToolStripMenuItem";
             this.mMGragientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mMGragientToolStripMenuItem.Text = "MMGragient";
+            this.mMGragientToolStripMenuItem.Text = "Gragient";
             this.mMGragientToolStripMenuItem.Click += new System.EventHandler(this.mMGragientToolStripMenuItem_Click);
             // 
             // pictureBox1
@@ -439,6 +441,13 @@
             this.topHatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.topHatToolStripMenuItem.Text = "TopHat";
             this.topHatToolStripMenuItem.Click += new System.EventHandler(this.topHatToolStripMenuItem_Click);
+            // 
+            // blackHatToolStripMenuItem
+            // 
+            this.blackHatToolStripMenuItem.Name = "blackHatToolStripMenuItem";
+            this.blackHatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blackHatToolStripMenuItem.Text = "BlackHat";
+            this.blackHatToolStripMenuItem.Click += new System.EventHandler(this.blackHatToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -505,6 +514,7 @@
         private System.Windows.Forms.ToolStripMenuItem staticColorCorrectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mathMorfologyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem topHatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blackHatToolStripMenuItem;
     }
 }
 
